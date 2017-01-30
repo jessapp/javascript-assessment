@@ -223,13 +223,13 @@
   function playGame(evt) {
     evt.preventDefault()
     
-    var guessed_number = $('#number-guessed').val();
+    var guessedNumber = $('#number-guessed').val();
     
-    if (guessed_number > number) {
+    if (guessedNumber > number) {
       $('#number-guessing-msg').html("Your guess was too high! Guess again");
     }
     
-    else if (guessed_number < number) {
+    else if (guessedNumber < number) {
       $('#number-guessing-msg').html("Your guess was too low! Guess again");
     }
     

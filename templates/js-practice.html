@@ -89,7 +89,9 @@
 <script>
   "use strict";
 
-  // COME BACK TO THIS
+  // COME BACK TO THIS ONE
+
+  
   
   var multiplyingForm = document.getElementById('multiplying-form');
 
@@ -102,7 +104,7 @@
 
     var multiples = [];
 
-        // get values from form up to and including requested
+    // get values from form up to and including requested
 
 
     for (var i = 0; i < secondNumber, i++) {
@@ -189,10 +191,10 @@
 <script>
   "use strict";
 
-    myImage = $('#make-a-porcupine').attr('src', ).on('click', porcupine);
+    $('#make-a-porcupine').on('click', porcupine);
   
     function porcupine(evt) {
-      $('#make-a-porcupine').on('click', popUp);
+      $('#cute-porcupine-image').delay(1000).fadeIn(1000);
   }
   
 
@@ -227,6 +229,20 @@
 <script>
   "use strict";
   // put your code here
+
+  var food = $('#favorite-food-input').val();
+
+  $('#agreeable-form').on('submit', agreeableButton);
+
+  function agreeableButton(evt) {
+    evt.preventDefault();
+    console.log(food);
+
+    $('#agreeable-text').html('I like ' + food + ', too.');
+
+  }
+
+
 </script>
 
 <div class="hint">
@@ -266,6 +282,8 @@
     var PRIME_COLORS = ['orange', 'midnightblue', 'darkgoldenrod', 'green', 'purple'];
 
   // put the rest of your code here
+
+  // COME BACK TO THIS
 </script>
 
 
@@ -313,6 +331,20 @@
   }
 
   // put your code here
+
+  // WOAH serialize was hard to find :(
+
+  function submitPuppies(evt) {
+
+    evt.preventDefault();
+
+    var puppies = $('#puppy-form').serialize();
+
+    $.get('/puppies.json?' + puppies, showPuppies);
+  }
+
+  $('#puppy-form').on('submit', submitPuppies);
+
 
 </script>
 
